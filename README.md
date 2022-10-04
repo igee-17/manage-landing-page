@@ -1,45 +1,53 @@
-> npm init
-
+```js
+npm init
+```
 - creates package.json
 
 - next install tailwind as a devDependency
 
-> npm install -D tailwindcss
+```js
+ npm install -D tailwindcss
+```
 
 - create tailwind.config.js file by:
 
-> npx tailwindcss init
-
+```js
+ npx tailwindcss init
+```
 - edit config file to specify where to look for tailwind classes
 
-> module.exports = {
+```js
+ module.exports = {
   content: ["./*.html"],
   theme: {
     extend: {},
   },
   plugins: [],
 };
-
+```
 - "./*.html" means all html files in root folder
 
 - create 'input.css' file and add:
 
-> @tailwind base;
-> @tailwind components;
-> @tailwind utilities;
-
+```js
+ @tailwind base;
+ @tailwind components;
+ @tailwind utilities;
+```
 - in package.json, under scripts:
 
-> "scripts": {
+```js
+ "scripts": {
     "build": "tailwindcss -i ./input.css -o ./css/main.css",
     "watch": "tailwindcss -i ./input.css -o ./css/main.css --watch"
   },
-
+```
 
 
 - in config file, screen sizes and default colors can be specified:
 
-> module.exports = {
+```js
+ module.exports = {
   content: ["./*.html"],
   theme: {
     screens: {
@@ -57,7 +65,7 @@
   plugins: [],
 };
 
-
+```
 -----------------------------------------------------------------------------
 
 TAILWIND CLASSES
